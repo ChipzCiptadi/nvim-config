@@ -11,6 +11,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"gopls",
+				"pyright",
 			},
 		},
 	},
@@ -25,6 +26,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
 

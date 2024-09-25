@@ -9,6 +9,7 @@ return {
 	opts = {
 		window = {
 			position = "left",
+            width = 40,
 		},
 		filesystem = {
 			follow_current_file = {
@@ -17,4 +18,7 @@ return {
 			},
 		},
 	},
+	config = function()
+		vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
+	end,
 }
