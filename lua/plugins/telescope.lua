@@ -12,6 +12,23 @@ return {
             vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
         end,
+        opts = {
+            defaults = {
+                layout_strategy = "horizontal",
+                layout_config = {
+                    width = 0.8,
+                    preview_width = 0.66,
+                },
+            },
+            -- pickers = {
+            --     find_files = {
+            --         theme = "dropdown",
+            --         layout_config = {
+            --             width = 0.66,
+            --         },
+            --     },
+            -- },
+        },
     },
     {
         "nvim-telescope/telescope-ui-select.nvim",

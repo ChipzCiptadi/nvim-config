@@ -12,6 +12,8 @@ return {
 				"lua_ls",
 				"gopls",
 				"pyright",
+                "html",
+                "eslint",
 			},
 		},
 	},
@@ -29,6 +31,12 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
 
