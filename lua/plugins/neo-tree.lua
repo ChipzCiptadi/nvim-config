@@ -19,6 +19,6 @@ return {
 		},
 	},
 	config = function()
-		vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
+		vim.cmd([[nnoremap \ :Neotree reveal=true toggle<cr>]])
 	end,
 }

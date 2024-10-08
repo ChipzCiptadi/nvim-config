@@ -12,8 +12,9 @@ return {
 				"lua_ls",
 				"gopls",
 				"pyright",
-                "html",
-                "eslint",
+				"html",
+				"eslint",
+				"yamlls",
 			},
 		},
 	},
@@ -28,6 +29,11 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
+				settings = {
+					gopls = {
+						gofumpt = true,
+					},
+				},
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
@@ -37,6 +43,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.eslint.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.yamlls.setup({
 				capabilities = capabilities,
 			})
 
