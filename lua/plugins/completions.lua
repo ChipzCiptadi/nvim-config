@@ -7,6 +7,7 @@ return {
 		version = "v2.*",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
+			"hrsh7th/cmp-path",
 			"rafamadriz/friendly-snippets",
 		},
 		build = "make install_jsregexp",
@@ -37,8 +38,8 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-				}, {
 					{ name = "buffer" },
+					{ name = "path" },
 				}),
 			})
 		end,
