@@ -123,25 +123,35 @@ return {
 				["pyright"] = function()
 					lspconfig["pyright"].setup({
 						capabilities = capabilities,
-						filetypes = { "py" },
+						filetypes = { "python" },
 					})
 				end,
 				["html"] = function()
 					lspconfig["html"].setup({
 						capabilities = capabilities,
-						filetypes = { "html" },
+						filetypes = { "html", "templ" },
 					})
 				end,
 				["eslint"] = function()
 					lspconfig["eslint"].setup({
 						capabilities = capabilities,
-						filetypes = { "js", "ts", "jsx", "tsx" },
+						filetypes = {
+							"javascript",
+							"javascriptreact",
+							"javascript.jsx",
+							"typescript",
+							"typescriptreact",
+							"typescript.tsx",
+							"vue",
+							"svelte",
+							"astro",
+						},
 					})
 				end,
 				["yamlls"] = function()
 					lspconfig["yamlls"].setup({
 						capabilities = capabilities,
-						filetypes = { "yaml", "yml" },
+						filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab" },
 					})
 				end,
 			})
