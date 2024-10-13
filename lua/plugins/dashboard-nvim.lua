@@ -6,9 +6,35 @@ return {
 			theme = "hyper",
 			shortcut_type = "number",
 			config = {
-				shortcut = {},
+				shortcut = {
+					{
+						icon = "📥 ",
+						desc = "Update",
+						group = "@property",
+						action = "Lazy update",
+						key = "u",
+					},
+					{
+						icon = "🔭 ",
+						icon_hl = "@variable",
+						desc = "Find Files",
+						group = "Label",
+						action = "Telescope find_files",
+						key = "f",
+					},
+					{
+						icon = "🔎 ",
+						desc = "Search Texts",
+						group = "Label",
+						action = "Telescope live_grep",
+						key = "g",
+					},
+				},
 				week_header = {
 					enable = true,
+				},
+				mru = {
+					cwd_only = true,
 				},
 				footer = function()
 					local quotes = {
