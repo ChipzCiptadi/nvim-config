@@ -3,9 +3,9 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
-opt.background= "dark"
+opt.background = "dark"
 
-opt.wrap = false
+opt.wrap = true
 
 opt.smartcase = true
 opt.hlsearch = true
