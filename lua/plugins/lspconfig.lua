@@ -22,6 +22,7 @@ return {
 
 			mason_lspconfig.setup({
 				ensure_installed = {
+					"bashls",
 					"lua_ls",
 					"gopls",
 					"pyright",
@@ -96,7 +97,19 @@ return {
 			mason_lspconfig.setup_handlers({
 				function(server_name)
 					lspconfig[server_name].setup({
+						cmd = { "bash-language-server", "start" },
 						capabilities = capabilities,
+					})
+				end,
+				["bashls"] = function()
+					lspconfig["bashls"].setup({
+						capabilities = capabilities,
+						filetypes = { "bash", "sh" },
+						settings = {
+							bashIde = {
+								globPattern = "*@(.sh|.inc|.bash|.command)",
+							},
+						},
 					})
 				end,
 				["lua_ls"] = function()
